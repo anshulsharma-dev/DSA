@@ -190,3 +190,112 @@ const patternButterfly = (n) => {
   downer(n);
 };
 // patternButterfly(9);
+
+// PATTTERN PROBLEM 7
+// 1
+// 121
+// 12321
+// 1234321
+// 123454321
+// 12345654321
+
+const patternProblem7 = (n) => {
+  for (let row = 1; row <= n; row++) {
+    let str = "";
+    for (let i = 1; i <= row; i++) {
+      str += i;
+    }
+    for (let j = row - 1; j >= 1; j--) {
+      str += j;
+    }
+    console.log(str);
+  }
+};
+// patternProblem7(6);
+
+// PATTER PROBLEM 8
+// -----*
+// ----*-*
+// ---*---*
+// --*-----*
+// -*-------*
+// *---------*
+function generatePattern(rows) {
+  for (let i = 0; i < rows; i++) {
+    let row = "";
+
+    // Add spaces before the asterisks
+    for (let j = rows - 1; j > i; j--) {
+      row += " ";
+    }
+
+    // Add the first asterisk
+    row += "*";
+
+    // Add dashes between the asterisks
+    for (let k = 0; k < 2 * i - 1; k++) {
+      row += " ";
+    }
+
+    // Add the last asterisk for all rows except the first one
+    if (i !== 0) {
+      row += "*";
+    }
+    console.log(row);
+  }
+}
+// generatePattern(6);
+
+// PATTERN PROBLEM  9
+// **********
+// ****  ****
+// ***    ***
+// **      **
+// *        *
+const upperPattern = (n) => {
+  let str = "";
+  for (let i = 1; i <= 2 * n; i++) {
+    str += "*";
+  }
+  2;
+  console.log(str);
+};
+const downPattern = (n) => {
+  for (let row = 1; row <= n - 1; row++) {
+    let str = "";
+    for (let i = n - 1; i >= row; i--) {
+      str += "*";
+    }
+    for (let j = 1; j <= 2 * row; j++) {
+      str += " ";
+    }
+    for (let i = n - 1; i >= row; i--) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+const patterProblem9 = (n) => {
+  upperPattern(n);
+  downPattern(n);
+};
+// patterProblem9(5);
+
+// PATTERN PROBLEM 10    (n = 5)
+
+const upperPattern10 = (n) => {
+  for (let i = 1; i <= n - 3; i++) {
+    let str = "";
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    for (let j = n - 2; j >= i; j--) { 
+      str += " ";
+    }
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+upperPattern10(5);
