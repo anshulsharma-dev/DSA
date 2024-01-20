@@ -287,14 +287,13 @@ const patterProblem9 = (n) => {
 // *****
 // **-**
 // *---*
-
 const upperPattern10 = (n) => {
   for (let i = 1; i <= n - 3; i++) {
     let str = "";
     for (let j = 1; j <= i; j++) {
       str += "*";
     }
-    for (let k = 1; k <= (n-i)-i ; k++) {   
+    for (let k = 1; k <= n - i - i; k++) {
       str += " ";
     }
     for (let j = 1; j <= i; j++) {
@@ -309,24 +308,25 @@ const middlePattern10 = (n) => {
     str += "*";
   }
   console.log(str);
-}
-
-const downPatern10 = (n) => {
-  for(let row = 1; row <= n-3; row++) {
+};
+const downPattern10 = (n) => {
+  for (let row = 1; row <= n - 3; row++) {
     let str = "";
-    for(let i = 1; i <= (n-2)-row; i++) {
+    for (let i = 1; i <= n - 2 - row; i++) {
       str += "*";
     }
-    for (let j = 1; j <= ; j++) {
+    for (let j = 1; j <= 2 * row - 1; j++) {
       str += " ";
     }
-    for(let i = 1; i <= (n-2)-i; i++) {
+    for (let i = 1; i <= n - 2 - row; i++) {
       str += "*";
     }
-    console.log(str)
+    console.log(str);
   }
-}
-
-upperPattern10(5);
-// middlePattern10(n);
-
+};
+const patternProblem10 = (n) => {
+  upperPattern10(n);
+  middlePattern10(n);
+  downPattern10(n);
+};
+patternProblem10(5);
