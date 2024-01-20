@@ -2,7 +2,7 @@ const about = () => {
   console.log("Data Structures and Alogorithms");
 };
 
-//                           Pattern Problem
+//                                     PATTERN PROBLEM 1
 // ****
 // ****
 // ****
@@ -19,7 +19,7 @@ const patterProblem1 = (n) => {
 };
 // patterProblem1(4);
 
-//             PATTERN PROBLEM 2
+//                                    PATTERN PROBLEM 2
 //      *
 //     **
 //    ***
@@ -42,7 +42,7 @@ const patterProblem2 = (n) => {
 };
 // patterProblem2(6);
 
-//               PATTERN PROBLEM 3
+//                                    PATTERN PROBLEM 3
 //      *
 //     ***
 //    *****
@@ -129,8 +129,9 @@ function patternProblem5(n) {
 }
 // patternProblem5(5);
 
-// PATTERN   PROBLEM  6
 
+
+//                                 PATTERN   PROBLEM  6
 // *       *
 // **     **
 // ***   ***
@@ -157,7 +158,6 @@ const upper = (n) => {
     console.log(str);
   }
 };
-
 const middle = (n) => {
   let str = "";
   for (let i = 1; i <= n; i++) {
@@ -165,7 +165,6 @@ const middle = (n) => {
   }
   console.log(str);
 };
-
 const downer = (n) => {
   for (let row = 1; row <= (n - 1) / 2; row++) {
     let str = "";
@@ -183,7 +182,6 @@ const downer = (n) => {
     console.log(str);
   }
 };
-
 const patternButterfly = (n) => {
   upper(n);
   middle(n);
@@ -191,7 +189,7 @@ const patternButterfly = (n) => {
 };
 // patternButterfly(9);
 
-// PATTTERN PROBLEM 7
+//                                       PATTTERN PROBLEM 7
 // 1
 // 121
 // 12321
@@ -213,7 +211,7 @@ const patternProblem7 = (n) => {
 };
 // patternProblem7(6);
 
-// PATTER PROBLEM 8
+//                                     PATTER PROBLEM 8
 // -----*
 // ----*-*
 // ---*---*
@@ -246,7 +244,7 @@ function generatePattern(rows) {
 }
 // generatePattern(6);
 
-// PATTERN PROBLEM  9
+//                                              PATTERN PROBLEM  9
 // **********
 // ****  ****
 // ***    ***
@@ -281,12 +279,14 @@ const patterProblem9 = (n) => {
 };
 // patterProblem9(5);
 
-// PATTERN PROBLEM 10    (n = 5)
-// *---*
-// **-**
+
+
+                                //   PATTERN PROBLEM 10    (n = 5)
+// *   *
+// ** **
 // *****
-// **-**
-// *---*
+// ** **
+// *   *
 const upperPattern10 = (n) => {
   for (let i = 1; i <= n - 3; i++) {
     let str = "";
@@ -329,4 +329,115 @@ const patternProblem10 = (n) => {
   middlePattern10(n);
   downPattern10(n);
 };
-patternProblem10(5);
+// patternProblem10(5);
+
+
+
+//                                                    PATTERN PROBLEM 11 ( n = 7)
+// *   *
+// ** **
+// *****
+// ** **
+// *   *
+const upperPattern11 = (n) => {
+  for (let i = 1; i <= n - 5; i++) {
+    let str = "";
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    for (let k = 1; k <= (n-2 )- i - i; k++) {
+      str += " ";
+    }
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+const middlePattern11 = (n) => {
+  let str = "";
+  for (let i = 1; i <= n-2; i++) {
+    str += "*";
+  }
+  console.log(str);
+};
+const downPattern11 = (n) => {
+  for (let row = 1; row <= n - 5; row++) {
+    let str = "";
+    for (let i = 1; i <= n - 4 - row; i++) {
+      str += "*";
+    }
+    for (let j = 1; j <= 2 * row - 1; j++) {
+      str += " ";
+    }
+    for (let i = 1; i <= n - 4 - row; i++) {
+      str += "*";
+    }
+    console.log(str);
+  }
+};
+const patternProblem11 = (n) => {
+  upperPattern11(n);
+  middlePattern11(n);
+  downPattern11(n);
+};
+// patternProblem11(7);
+
+
+
+//                                            PATTERN PROBLEM  12
+const upperPattern12 = (n) => {
+    let str = "";
+    for (let j = 1; j < 2; j++) {
+      str += n;
+    }
+    for (let j = 1; j < 5; j++) {
+      str += " ";
+  }
+  for (let j = 1; j < 2 ; j++) {
+    str += n;
+  }
+  console.log(str);
+}
+const middlePattern12 = (n) => {
+  for (let i = 1; i < n-1 ; i++) {
+    let str = "";
+    for (let j = 1; j <= i; j++) {
+      str += " ";
+    }
+    for (let j = (n-i); j >= n - i; j--) {
+      str += j;
+    }
+    for (let j = 1; j <= (n-1)-i; j++) {
+      str += " ";
+    }
+    for (let j = (n-i); j >= n - i; j--) {
+      str += j;
+    }
+    for (let j = 1; j <= i; j++) {
+      str += " ";
+    }
+    console.log(str)
+  }
+}
+const downerPattern12 = (n) => {
+  let str = "";
+  for (let i = 1; i < (n); i++) {
+    str += " ";
+  }
+  for (let i = 1; i < (n-2); i++) {
+    str += "1";
+  }
+  for (let i = 1; i < (n); i++) {
+    str += " ";
+  }
+  console.log(str);
+}
+const patternProblem12 = (n) => {
+  upperPattern12(n);
+  middlePattern12(n);
+  downerPattern12(n);
+}
+patternProblem12(4)
+
+
