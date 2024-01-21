@@ -386,6 +386,10 @@ const patternProblem11 = (n) => {
 
 
 //                                            PATTERN PROBLEM  12
+//4    4
+// 3  3 
+//  2 2  
+//   1   
 const upperPattern12 = (n) => {
     let str = "";
     for (let j = 1; j < 2; j++) {
