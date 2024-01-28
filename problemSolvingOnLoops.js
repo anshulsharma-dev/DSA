@@ -11,7 +11,6 @@ const gcd = (a, b) => {
 };
 // gcd(88 , 56)
 
-
 //                       Euclid's  Algorithm for finding gcd
 const euclidALgo = (a, b) => {
   while (b !== 0) {
@@ -24,9 +23,22 @@ const euclidALgo = (a, b) => {
 // euclidALgo(120, 99);
 
 const recursiveEuclidAlgo = (a, b) => {
-  if (b === 0 ) {
+  if (b === 0) {
     return a;
-  }
-  else  return recursiveEuclidAlgo(b, a % b);
+  } else return recursiveEuclidAlgo(b, a % b);
 };
-console.log(recursiveEuclidAlgo(190, 24));
+// console.log(recursiveEuclidAlgo(190, 24));
+
+
+
+//  SUM OF DIGITS
+const sumOfDigits = (x) => {
+  let sum = 0;
+  while (x > 0) {
+    let lastDigit = x % 10;
+    sum += lastDigit;
+    x = Math.floor(x / 10);
+  }
+  return console.log(sum);
+};
+// sumOfDigits(41368)
